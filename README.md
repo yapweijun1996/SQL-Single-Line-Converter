@@ -13,3 +13,7 @@ A lightweight web tool that converts multi-line SQL queries into a single-line s
 1. Paste your multi-line SQL code into the input textarea.
 2. Click the **Convert to Single Line** button.
 3. Copy your single-line SQL from the output textarea.
+
+
+## Demo
+https://yapweijun1996.github.io/SQL-Single-Line-Converter/
