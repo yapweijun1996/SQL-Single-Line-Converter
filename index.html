@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQL Single Line Converter</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #e0eafc, #cfdef3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      textarea {
+        width: 100%;
+        min-height: 180px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        resize: vertical;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        transition: border-color 0.3s ease;
+      }
+      textarea:focus {
+        outline: none;
+        border-color: #4285f4;
+      }
+      button {
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+        background: #4285f4;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      button:hover {
+        background: #357ae8;
+      }
+      footer {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SQL Single Line Converter</h1>
+      <textarea id="input" placeholder="Paste your multi-line SQL here">
+	  Insert Into xxxx (
+		tag_table_usage,				
+		uniquexxxxpri,					uniquexxxxsec,						uniquexxxxuniq,
+		masterfn,					holdfn,							groupfn,						companyfn,
+		userid_xxxx,
+
+		cslremote,					cslapplic,						cslmodule,						cslsegm,
+		csltemplate,
+		tag_tab_type,
+		
+		xxxx001,					xxxx002,						xxxx003,						xxxx004,
+		xxxx005,					xxxx006,	
+		
+		notes_memo,
+		xxxx2_001,					xxxx2_002,						xxxx2_003,						xxxx2_004,
+		
+		xxxx2_dn_001,					xxxx2_dn_002,						xxxx2_dn_003,						xxxx2_dn_004,
+		xxxx2_dn_005,					xxxx2_dn_006,						xxxx2_dn_007,						xxxx2_dn_008,
+		xxxx2_dn_009,					xxxx2_dn_010,
+					
+		xxxx5_001,					xxxx5_002,						xxxx5_003,						xxxx5_004,
+		
+		xxxx25_001,					xxxx25_002,						xxxx25_003,						xxxx25_004,
+		xxxx25_005,					xxxx25_006,						xxxx25_007,						xxxx25_008,
+		xxxx25_009,					xxxx25_010,						xxxx25_011,						xxxx25_012,
+		
+		
+		xxxx5xxxx01,					xxxx5xxxx02,						xxxx5xxxx03,						xxxx5xxxx04,
+		xxxx5xxxx05,					xxxx5xxxx06,						xxxx5xxxx07,						xxxx5xxxx08,
+		
+		
+		xxxx10xxxx01,					xxxx10xxxx02,						xxxx10xxxx03,						xxxx10xxxx04,
+		xxxx10xxxx05,					xxxx10xxxx06,						xxxx10xxxx07,						xxxx10xxxx08,
+		xxxx10xxxx09,					xxxx10xxxx10,
+		
+		xxxx20_2_dxxxx01,				xxxx20_2_dxxxx02,					xxxx20_2_dxxxx03,					xxxx20_2_dxxxx04,
+		xxxx20_2_dxxxx05,				xxxx20_2_dxxxx06,					xxxx20_2_dxxxx07,					xxxx20_2_dxxxx08,
+		
+			xxxx20_10_d1_001,				xxxx20_10_d1_002,					xxxx20_10_d1_003,					xxxx20_10_d1_004
+		
+		)
+		
+		
+		Values(
+		'#fromtrans#',
+		'#fmi_uniquexxxxpri#',				'',							'#r_gvac_uniquexxxxuniq#',
+		<cfqueryparam value="#xxxx.xxxx#" cfsqltype="cf_sql_varchar">,			'',							'',							<cfqueryparam value="#xxxx.xxxx#" cfsqltype="cf_sql_varchar">,
+		<cfqueryparam value="#xxxx.xxxx#" cfsqltype="cf_sql_varchar">,
+		'#remote_addr#',				'',							'',							'#fromtrans#',
+
+		'',
+		'#r_tab_type#',
+		<CFQUERYPARAM VALUE=#TNOdateformat('#xxxx# ')# CFSQLTYPE="CF_SQL_DATE">,
+		<CFQUERYPARAM VALUE=#TNOdateformat('#xxxx# ')# CFSQLTYPE="CF_SQL_DATE">,
+		<CFQUERYPARAM VALUE=#TNOdateformat('#xxxx# ')# CFSQLTYPE="CF_SQL_DATE">,
+
+		<CFQUERYPARAM VALUE=#TNOdateformat('#xxxx# ')# CFSQLTYPE="CF_SQL_DATE">,
+		<CFQUERYPARAM VALUE=#TNOdateformat('#xxxx# ')# CFSQLTYPE="CF_SQL_DATE">,	
+		<CFQUERYPARAM VALUE=#TNOdateformat('#xxxx# ')# CFSQLTYPE="CF_SQL_DATE">,
+		
+		'',
+		'#r_gvac_curr_deci#',				'#fmi_curr_decimal#',					'#r_gvac_auto_cal_yn#',							'',
+		
+		'',						'',							'',							'',
+		'',						'',							'',							'',
+
+
+
+
+
+
+		'',						'',
+		
+		'',						'',							'',							'',
+		
+		'#r_gvac_unique#',				'#r_vendor_unique#',					'#r_gvac_acct_unique#',					'#r_gvac_curr_code#',
+		'#fmi_curr_short_forex#',			'#r_stkcode_unique#',					'#r_row_unique#',							'',
+		'',						'',							'',							'',
+		
+		'#r_gvac_code#',				'#r_vendor_code#',					'#r_gvac_acct_code#',					'',
+		'',						'',						'',							'',
+		
+		'#r_gvac_desc#',				'#r_vendor_desc#',					'#r_gvac_acct_desc#',					'',
+		'',						'',							'',							'',
+		'',						'',
+		
+		'#r_gvac_forexamt#',				'#r_gvac_poccyamt#',					'#r_po_amt_up#',					'#r_po_amt_tot#',
+		'#def_Number#',					'#def_Number#',						'#def_Number#',						'#def_Number#',
+		'#def_Number#',					'#def_Number#',						'#def_Number#',						'#def_Number#'
+		)
+	  </textarea>
+      <button onclick="convertSQL()">Convert to Single Line</button>
+      <textarea id="output" placeholder="Single-line SQL output"></textarea>
+      <footer>© 2023 SQL Converter</footer>
+    </div>
+    <script>
+      function convertSQL() {
+        var inputText = document.getElementById("input").value;
+        var singleLineText = inputText.replace(/\n/g, ' ').replace(/\s\s+/g, ' ').trim();
+        document.getElementById("output").value = singleLineText;
+      }
+    </script>
+  </body>
+</html>
